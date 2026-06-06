@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Fisiotraining</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <img src="assets/logofisio.png" alt="header" />
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Ubicanos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="openModal btn sign__in">Agendar Cita</button>
+      </div>
+    </nav>
+    <header class="header__container">
+      <div class="header__image">
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-heart-add-2-line"></i></span>
+          Rehabilitación Física
+        </div>
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-arrow-down-line"></i></span>
+          Menos Dolor
+        </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-calendar-todo-line"></i></span>
+          Atención Personalizada
+        </div>
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-run-fill"></i></span>
+          Fisioterapia Deportiva
+        </div>
+        <img src="assets/logoeduardo.png" alt="header" />
+
+        <div class="mobile-cards">
+          <div class="mobile-card">
+            <i class="ri-heart-add-2-line"></i>
+            Rehabilitación Física
+          </div>
+
+          <div class="mobile-card">
+            <i class="ri-arrow-down-line"></i>
+            Menos Dolor
+          </div>
+
+          <div class="mobile-card">
+            <i class="ri-calendar-todo-line"></i>
+            Atención Personalizada
+          </div>
+
+          <div class="mobile-card">
+            <i class="ri-run-fill"></i>
+            Fisioterapia Deportiva
+          </div>
+        </div>
+      </div>
+      <div class="header__content">
+        <h1>VUELVE A <br /><span>MOVERTE CON </span><br />CONFIANZA</h1>
+        <p>
+          En Fisiotraining te ayudamos a recuperar tu movilidad, aliviar el
+          dolor y mejorar tu calidad de vida con tratamientos personalizados y
+          con profesionales certificados.
+        </p>
+        <form action="/">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Llámanos</h5>
+              <div>
+                <span><i class="ri-phone-line"></i></span>
+                <input type="text" placeholder="+51 123456789" />
+              </div>
+            </div>
+
+            <div class="input__group">
+              <h5>Dirección</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="Av. Palmera" />
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="openModal" class="openModal btn">
+            Agendar Cita
+          </button>
+        </form>
+        <div class="bar">
+          ©2026 Fisiotraining. Todos los derechos reservados.
+        </div>
+      </div>
+    </header>
+      <!-- MODAL FUERA DEL FORM -->
+
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+
+            <h2>Agenda tu Evaluación</h2>
+
+            <p class="modal-subtitle">
+              Déjanos tus datos y nos comunicaremos contigo.
+            </p>
+
+            <form id="appointmentForm">
+              <div class="form-row">
+                <input id="nombre" type="text" placeholder="Nombre" required />
+                <input id="apellido" type="text" placeholder="Apellido" required />
+              </div>
+
+              <div class="form-row">
+                <input id="telefono" type="tel" placeholder="Teléfono" required />
+                <input id="edad" type="number" placeholder="Edad" />
+              </div>
+
+              <input id="correo" type="email" placeholder="Correo Electrónico" />
+
+              <select id="molestia">
+                <option>¿Qué molestia presentas?</option>
+                <option>Dolor de espalda</option>
+                <option>Dolor cervical</option>
+                <option>Dolor de rodilla</option>
+                <option>Lesión deportiva</option>
+                <option>Rehabilitación postoperatoria</option>
+              </select>
+
+              <select id="tiempo">
+                <option>¿Desde cuándo tienes la molestia?</option>
+                <option>Menos de una semana</option>
+                <option>1 a 4 semanas</option>
+                <option>1 a 3 meses</option>
+                <option>Más de 3 meses</option>
+              </select>
+
+              <textarea id="comentario" placeholder="Cuéntanos un poco más"></textarea>
+
+              <label class="checkbox">
+                <input type="checkbox" required />
+                Acepto el tratamiento de mis datos personales.
+              </label>
+
+              <button type="submit">Solicitar Evaluación</button>
+            </form>
+          </div>
+        </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+    <script src="modal.js"></script>
+    <script src="datos.js"></script>
+  </body>
+</html>
