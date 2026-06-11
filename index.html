@@ -8,6 +8,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nosotros.css" />
+    <link rel="stylesheet" href="servicios.css" />
+    <link rel="stylesheet" href="sedes.css" />
+    <link rel="stylesheet" href="cta.css" />
+    <link rel="stylesheet" href="footer.css" />
     <title>Fisiotraining</title>
   </head>
   <body>
@@ -21,11 +26,11 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Ubicanos</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sedes">Ubicanos</a></li>
+        <!-- <li><a href="#">Contacto</a></li> -->
       </ul>
       <div class="nav__btns">
         <button class="openModal btn sign__in">Agendar Cita</button>
@@ -91,76 +96,276 @@
             </div>
 
             <div class="input__group">
-              <h5>Dirección</h5>
+              <h5>Sedes</h5>
               <div>
                 <span><i class="ri-map-pin-line"></i></span>
-                <input type="text" placeholder="Av. Palmera" />
+                <input type="text" value="Los Olivos | Magdalena" readonly />
               </div>
             </div>
           </div>
-
-          <button type="button" id="openModal" class="openModal btn">
-            Agendar Cita
-          </button>
         </form>
-        <div class="bar">
-          ©2026 Fisiotraining. Todos los derechos reservados.
-        </div>
       </div>
     </header>
-      <!-- MODAL FUERA DEL FORM -->
 
-        <div class="modal" id="modal">
-          <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
+    <section class="about" id="nosotros">
+      <div class="about__container">
+        <div class="about__image">
+          <img src="assets/grupo.jpg" alt="Fisiotraining" />
+        </div>
 
-            <h2>Agenda tu Evaluación</h2>
+        <div class="about__content">
+          <span class="section-tag">NOSOTROS</span>
 
-            <p class="modal-subtitle">
-              Déjanos tus datos y nos comunicaremos contigo.
-            </p>
+          <h2>Recuperamos tu movilidad y mejoramos tu calidad de vida</h2>
 
-            <form id="appointmentForm">
-              <div class="form-row">
-                <input id="nombre" type="text" placeholder="Nombre" required />
-                <input id="apellido" type="text" placeholder="Apellido" required />
-              </div>
+          <p>
+            En Fisiotraining contamos con profesionales capacitados en
+            fisioterapia y rehabilitación física, comprometidos con brindar
+            tratamientos personalizados para aliviar el dolor, prevenir lesiones
+            y ayudarte a recuperar tu bienestar.
+          </p>
 
-              <div class="form-row">
-                <input id="telefono" type="tel" placeholder="Teléfono" required />
-                <input id="edad" type="number" placeholder="Edad" />
-              </div>
+          <div class="about__stats">
+            <div class="stat">
+              <h3>+500</h3>
+              <span>Pacientes atendidos</span>
+            </div>
 
-              <input id="correo" type="email" placeholder="Correo Electrónico" />
+            <div class="stat">
+              <h3>2</h3>
+              <span>Sedes en Lima</span>
+            </div>
 
-              <select id="molestia">
-                <option>¿Qué molestia presentas?</option>
-                <option>Dolor de espalda</option>
-                <option>Dolor cervical</option>
-                <option>Dolor de rodilla</option>
-                <option>Lesión deportiva</option>
-                <option>Rehabilitación postoperatoria</option>
-              </select>
+            <div class="stat">
+              <h3>100%</h3>
+              <span>Atención personalizada</span>
+            </div>
+          </div>
 
-              <select id="tiempo">
-                <option>¿Desde cuándo tienes la molestia?</option>
-                <option>Menos de una semana</option>
-                <option>1 a 4 semanas</option>
-                <option>1 a 3 meses</option>
-                <option>Más de 3 meses</option>
-              </select>
+          <button class="openModal btn-about">Agenda tu evaluación</button>
+        </div>
+      </div>
+    </section>
 
-              <textarea id="comentario" placeholder="Cuéntanos un poco más"></textarea>
+    <section class="services" id="servicios">
+      <div class="services__header">
+        <span class="section-tag">SERVICIOS</span>
 
-              <label class="checkbox">
-                <input type="checkbox" required />
-                Acepto el tratamiento de mis datos personales.
-              </label>
+        <h2>Tratamientos diseñados para tu recuperación</h2>
 
-              <button type="submit">Solicitar Evaluación</button>
-            </form>
+        <p>
+          Contamos con servicios especializados para ayudarte a recuperar tu
+          movilidad, aliviar el dolor y mejorar tu rendimiento físico.
+        </p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service__card">
+          <i class="ri-heart-pulse-fill"></i>
+          <h3>Rehabilitación Física</h3>
+          <p>
+            Tratamientos orientados a recuperar la movilidad y funcionalidad
+            después de lesiones o cirugías.
+          </p>
+        </div>
+
+        <div class="service__card">
+          <i class="ri-run-fill"></i>
+          <h3>Fisioterapia Deportiva</h3>
+          <p>
+            Prevención y recuperación de lesiones deportivas para volver a tu
+            actividad física con seguridad.
+          </p>
+        </div>
+
+        <div class="service__card">
+          <i class="ri-hand-heart-fill"></i>
+          <h3>Terapia Manual</h3>
+          <p>
+            Técnicas especializadas para aliviar tensiones musculares y mejorar
+            la movilidad articular.
+          </p>
+        </div>
+
+        <div class="service__card">
+          <i class="ri-mental-health-fill"></i>
+          <h3>Tratamiento del Dolor</h3>
+          <p>
+            Soluciones personalizadas para dolores musculares, cervicales,
+            lumbares y articulares.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sedes" id="sedes">
+      <div class="section-title">
+        <span>NUESTRAS SEDES</span>
+        <h2>Elige la sede más cercana</h2>
+      </div>
+
+      <div class="sedes-grid">
+        <div class="sede-card">
+          <img src="assets/olivos.jfif" alt="Los Olivos" />
+
+          <h3 class="sede-title">Los Olivos</h3>
+
+          <div class="sede-overlay">
+            <h3>Sede Los Olivos</h3>
+
+            <p>Av. Las Palmeras</p>
+
+            <a href="#" target="_blank"> Ver en Google Maps </a>
           </div>
         </div>
+
+        <div class="sede-card">
+          <img src="assets/magdalena.jfif" alt="Los Olivos" />
+
+          <h3 class="sede-title">Magdalena</h3>
+
+          <div class="sede-overlay">
+            <h3>Sede Magdalena</h3>
+
+            <p>Flora Tristan</p>
+
+            <a href="#" target="_blank"> Ver en Google Maps </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__container">
+        <span class="section-tag"> COMIENZA HOY </span>
+
+        <h2>Da el primer paso hacia tu recuperación</h2>
+
+        <p>
+          Nuestro equipo de especialistas está listo para ayudarte a recuperar
+          tu movilidad, aliviar el dolor y mejorar tu calidad de vida.
+        </p>
+
+        <button class="openModal cta-btn">Agendar Evaluación</button>
+      </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+      <div class="footer__container">
+        <div class="footer__col">
+          <img src="assets/logofisio.png" alt="Fisiotraining" />
+
+          <p>
+            Especialistas en fisioterapia y rehabilitación física, comprometidos
+            con tu bienestar y recuperación.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sedes</h4>
+
+          <a href="#sedes">Los Olivos</a>
+          <a href="#sedes">Magdalena</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contacto</h4>
+
+          <a href="tel:+51999999999"> +51 999 999 999 </a>
+
+          <a href="mailto:contacto@fisiotraining.com">
+            contacto@fisiotraining.com
+          </a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Síguenos</h4>
+
+          <div class="footer__socials">
+            <a href="#">
+              <i class="ri-facebook-fill"></i>
+            </a>
+
+            <a href="#">
+              <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="#">
+              <i class="ri-tiktok-fill"></i>
+            </a>
+
+            <a href="#">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        © 2026 Fisiotraining. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- MODAL FUERA DEL FORM -->
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+
+        <h2>Agenda tu Evaluación</h2>
+
+        <p class="modal-subtitle">
+          Déjanos tus datos y nos comunicaremos contigo.
+        </p>
+
+        <form id="appointmentForm">
+          <div class="form-row">
+            <input id="nombre" type="text" placeholder="Nombre" required />
+            <input id="apellido" type="text" placeholder="Apellido" required />
+          </div>
+
+          <div class="form-row">
+            <input id="telefono" type="tel" placeholder="Teléfono" required />
+            <input id="edad" type="number" placeholder="Edad" />
+          </div>
+
+          <input id="correo" type="email" placeholder="Correo Electrónico" />
+
+          <select id="molestia">
+            <option>¿Qué molestia presentas?</option>
+            <option>Dolor de espalda</option>
+            <option>Dolor cervical</option>
+            <option>Dolor de rodilla</option>
+            <option>Lesión deportiva</option>
+            <option>Rehabilitación postoperatoria</option>
+          </select>
+
+          <select id="tiempo">
+            <option>¿Desde cuándo tienes la molestia?</option>
+            <option>Menos de una semana</option>
+            <option>1 a 4 semanas</option>
+            <option>1 a 3 meses</option>
+            <option>Más de 3 meses</option>
+          </select>
+          <select id="sede" required>
+            <option value="">Selecciona una sede</option>
+            <option>Los Olivos - Av. Palmeras</option>
+            <option>Magdalena del Mar</option>
+          </select>
+          <textarea
+            id="comentario"
+            placeholder="Cuéntanos un poco más"
+          ></textarea>
+
+          <label class="checkbox">
+            <input type="checkbox" required />
+            Acepto el tratamiento de mis datos personales.
+          </label>
+
+          <button type="submit">Solicitar Evaluación</button>
+        </form>
+      </div>
+    </div>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
     <script src="modal.js"></script>

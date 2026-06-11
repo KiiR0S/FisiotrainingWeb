@@ -1,7 +1,6 @@
 const form = document.getElementById("appointmentForm");
 
 form.addEventListener("submit", async (e) => {
-
   e.preventDefault();
 
   const data = {
@@ -12,16 +11,19 @@ form.addEventListener("submit", async (e) => {
     correo: document.getElementById("correo").value,
     molestia: document.getElementById("molestia").value,
     tiempo: document.getElementById("tiempo").value,
-    comentario: document.getElementById("comentario").value
+    sede: document.getElementById("sede").value,
+    comentario: document.getElementById("comentario").value,
   };
 
-  await fetch("https://script.google.com/macros/s/AKfycbwlve7el8mDbPmabPME675CTgz9bvUJLgIa93unxWcYHKce7dykir5JI_FZ5hJQv0qFpg/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
+  await fetch(
+    "https://script.google.com/macros/s/AKfycbynEH62nCJIZuYjGqnMw2VOqn7laSjL3tIXByHbLfOCnI3Ttgp8lfBVzSbMy6wJ4bxCWw/exec",
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+    },
+  );
 
   alert("Solicitud enviada correctamente");
 
   form.reset();
-
 });

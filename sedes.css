@@ -1,0 +1,162 @@
+.sedes{
+  padding: 6rem 1rem;
+}
+
+.sedes-grid{
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.sede-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 350px; /* antes 450 */
+  cursor: pointer;
+}
+
+.sede-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: .5s;
+}
+
+.sede-overlay{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  background:rgba(255, 255, 255, 0.65);
+
+  opacity:0;
+  transition:.4s;
+}
+
+.sede-card:hover .sede-overlay{
+  opacity:1;
+}
+
+.sede-card:hover img{
+  transform: scale(1.1);
+}
+
+.sede-overlay h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.sede-overlay a{
+  margin-top: 1rem;
+  padding: 12px 24px;
+
+  background: var(--primary-color);
+  color: white;
+
+  border-radius: 10px;
+}
+
+.sede-title{
+  position:absolute;
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  color:white;
+  font-size:2rem;
+  font-weight:700;
+
+  text-shadow:0 3px 10px rgba(255, 255, 255, 0.5);
+
+  z-index:2;
+
+  transition:.4s;
+}
+
+.sede-card:hover .sede-title{
+  opacity:0;
+}
+
+.sedes .section-title{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sedes .section-title span{
+  display: block;
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.sedes .section-title h2{
+  font-size: 3rem;
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px){
+
+  .sedes{
+    padding: 4rem 1rem;
+  }
+
+  .sedes-grid{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sede-card{
+    height: 280px;
+  }
+
+  .sede-title{
+    font-size: 1.6rem;
+  }
+
+  .sede-overlay h3{
+    font-size: 1.5rem;
+  }
+
+  .sede-overlay p{
+    font-size: .95rem;
+  }
+
+  .sede-overlay a{
+    padding: 10px 20px;
+    font-size: .9rem;
+  }
+
+  .section-title h2{
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .sede-card{
+    height: 220px;
+  }
+
+  .sede-title{
+    font-size: 1.3rem;
+  }
+
+  .section-title h2{
+    font-size: 1.8rem;
+  }
+
+}
